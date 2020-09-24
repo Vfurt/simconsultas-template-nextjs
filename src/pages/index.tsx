@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import React from 'react'
+import { DatePicker } from 'antd'
 
 const Home: React.FC = () => {
   return (
@@ -9,6 +10,7 @@ const Home: React.FC = () => {
       </Head>
 
       <main>
+        <DatePicker></DatePicker>
         <h1>Hello World</h1>
       </main>
     </div>
