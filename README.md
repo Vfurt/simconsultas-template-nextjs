@@ -1,30 +1,43 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# SIM Consultas Next.js Template
 
-## Getting Started
+# Ferramentas utilizadas
+- [Next.js](https://nextjs.org/docs)
+- [Ant Design](https://ant.design/)
+- [Serverless](https://www.serverless.com)
+- [Typescript](https://www.typescriptlang.org/)
+- [prettier](https://prettier.io/)
+- [EsLint](https://eslint.org)
+- [Yarn](https://classic.yarnpkg.com)
 
-First, run the development server:
-
+## Iniciando
+### Instalando dependências
 ```bash
-npm run dev
-# or
-yarn dev
+yarn
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Executar servidor em development
+```bash
+yarn dev
+#localhost:3000
+```
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+### Executar bundle analyzer
+```bash
+yarn analyze
+```
 
-## Learn More
+## Deploy em Amazon Cloudfront
+1. [Instalar Serverless cli](https://www.serverless.com/framework/docs/providers/aws/cli-reference/install/)
+```bash
+yarn global add serverless
+```
+2. [Configurar credenciais aws](https://www.serverless.com/framework/docs/providers/aws/cli-reference/config-credentials/)
+```bash
+serverless config credentials --provider aws --key key --secret secret
+```
+3. Configurar arquivo serverless.yml
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/import?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+4. Publicar
+```bash
+serverless
+```
