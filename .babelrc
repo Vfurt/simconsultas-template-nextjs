@@ -4,11 +4,17 @@
   ],
   "plugins": [
     [
+      "babel-plugin-styled-components",
+      {
+        "ssr": true,
+        "displayName": true
+      }
+    ],
+    [
       "import",
       {
         "libraryName": "antd",
-        "libraryDirectory": "lib",
-        "style": "index.css"
+        "style": true
       }
     ],
     [
